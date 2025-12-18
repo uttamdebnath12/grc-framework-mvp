@@ -20,13 +20,13 @@ This project is a web-based Governance, Risk, and Compliance (GRC) framework MVP
 ## Screenshots
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/dashboardoverview.png)
 
 ### Risk Register
-![Risks](screenshots/risks.png)
+![Risks](screenshots/riskregister.png)
 
 ### Compliance Mapping
-![Compliance](screenshots/compliance.png)
+![Compliance](screenshots/compliances.png)
 
 
 ## Project Type
