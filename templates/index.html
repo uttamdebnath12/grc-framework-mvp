@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GRC Framework MVP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+
+<h1>GRC Framework Dashboard</h1>
+
+<h2>Summary</h2>
+
+<div class="summary">
+    <div class="card">
+        <h3>Total Assets</h3>
+        <p>{{ total_assets }}</p>
+    </div>
+    <div class="card">
+        <h3>Total Risks</h3>
+        <p>{{ total_risks }}</p>
+    </div>
+    <div class="card">
+        <h3>High Risks</h3>
+        <p>{{ high_risks }}</p>
+    </div>
+    <div class="card">
+        <h3>Medium Risks</h3>
+        <p>{{ medium_risks }}</p>
+    </div>
+    <div class="card">
+        <h3>Low Risks</h3>
+        <p>{{ low_risks }}</p>
+    </div>
+</div>
+
+<hr>
+
+<h2>Navigation</h2>
+<ul>
+    <li><a href="/risks">View Risk Register</a></li>
+    <li><a href="/compliance">View Compliance</a></li>
+</ul>
+
+</div>
+</body>
+</html>
+
