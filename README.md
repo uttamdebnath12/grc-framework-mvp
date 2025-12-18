@@ -18,7 +18,6 @@ This project is a web-based Governance, Risk, and Compliance (GRC) framework MVP
 - Styling: Custom CSS
 
 ## Screenshots
-## Screenshots
 
 ### Dashboard
 ![Dashboard](screenshots/dashboard.png)
