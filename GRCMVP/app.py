@@ -77,6 +77,7 @@ def home():
 
     conn.close()
 
+
     return render_template(
         "index.html",
         total_assets=total_assets,
@@ -131,6 +132,27 @@ def add_control(name, standard):
     conn.commit()
     conn.close()
     return f"Control added → {name} ({standard})"
+
+# ---------- ADD COMPLIANCE ----------
+@app.route("/add-compliance/<int:control_id>/<regulation>/<status>")
+def add_compliance(control_id, regulation, status):
+    conn = get_db_connection()
+    conn.execute(
+        "INSERT INTO compliance (control_id, regulation, status) VALUES (?, ?, ?)",
+        (control_id, regulation, status)
+    )
+    conn.commit()
+    conn.close()
+
+    return f"Compliance added → Control {control_id}, {regulation}, {status}"
+
+@app.route("/delete-risk/<int:risk_id>")
+def delete_risk(risk_id):
+    conn = get_db_connection()
+    conn.execute("DELETE FROM risks WHERE id = ?", (risk_id,))
+    conn.commit()
+    conn.close()
+    return f"Risk {risk_id} deleted successfully"
 
 # ---------- MAP CONTROL TO REGULATION ----------
 @app.route("/map-control/<int:control_id>/<regulation>")
